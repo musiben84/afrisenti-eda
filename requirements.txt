@@ -12,6 +12,7 @@ speechbrain>=0.5.0
 nltk>=3.8.0
 spacy>=3.5.0
 gensim>=4.3.0
+emoji>=2.8.0  # For emoji handling in text preprocessing
 datasets<4.0.0  # Version constraint for AfriSenti compatibility
 sentence-transformers>=2.2.0
 
