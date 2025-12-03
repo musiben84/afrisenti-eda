@@ -1,7 +1,6 @@
 # AfriSenti — Multilingual Sentiment Analysis
 
-GROUP -2 Assignment  
-Sentiment Analysis (Multilingual Tweets)
+Sentiment Analysis (Multilingual Tweets) 
 
 **Authors:** Ainedembe Denis, Musinguzi Benson  
 **Lecturer:** Dr. Sitenda Harriet
@@ -9,6 +8,18 @@ Sentiment Analysis (Multilingual Tweets)
 This project implements a comprehensive analysis of the AfriSenti dataset, the largest sentiment analysis dataset for under-represented African languages, covering 110,000+ annotated tweets in 14 African languages.
 
 ## Requirements
+
+### Python Version Compatibility
+
+**Important:** This project requires Python 3.11 or earlier for transformer models to work properly.
+
+- **Python 3.13:** Has compatibility issues with transformers library (models cannot load)
+- **Python 3.11/3.12:** Recommended - all features work correctly
+- **Python 3.10:** Also compatible
+
+**If you're using Python 3.13:**
+- You can still use the LSTM baseline model (works fine)
+- Transformer models (XLM-RoBERTa, mBERT) will not load
 
 ### Installation
 
@@ -87,13 +98,25 @@ For multilingual support:
 python -m spacy download xx_ent_wiki_sm
 ```
 
+## Python Version Setup (For Transformer Models)
+
+If you need to use transformer models (XLM-RoBERTa, mBERT), Python v3.11 is neeed.
+- Installing Python 3.11 alongside Python 3.13
+- Creating a virtual environment
+- Setting up Jupyter kernel
+
+**Quick Start (Conda):**
+```bash
+conda create -n afrisenti python=3.11
+conda activate afrisenti
+pip install -r requirements.txt
+```
+
 ## Folder Layout
 ```
 ├── afrisenti-analysis.ipynb    # Main analysis notebook
 ├── requirements.txt            # Python package dependencies
-├── README.md                    # This file
+├── README.md                   # This file
 └── outputs/                    # Generated outputs
-    ├── figures/                # Visualization figures
-    └── tables/                 # Data tables
 ```
 
